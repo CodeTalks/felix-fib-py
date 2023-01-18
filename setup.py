@@ -1,5 +1,6 @@
 from setuptools import find_packages, setup
 
+
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
@@ -21,4 +22,9 @@ setup(
     ],
     python_requires='>=3',
     tests_require=['pytest'],
+    entry_points={
+        'console_scripts': [
+            'fib-number = felix_fib_py.cmd.fib_numb:fib_numb',
+        ]
+    }
 )
