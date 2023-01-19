@@ -10,11 +10,12 @@ class Test(TestCase):
         self.assertEqual(expected_outcome, calculate_numbers(numbers=[3, 4]))
 
         self.assertEqual(2, len(mock_fib_calc.call_args_list))
-        self.assertEqual({'number': 3}, mock_fib_calc.call_args_list[0][1])
-        self.assertEqual({'number': 4}, mock_fib_calc.call_args_list[1][1])
+        self.assertEqual({"number": 3}, mock_fib_calc.call_args_list[0][1])
+        self.assertEqual({"number": 4}, mock_fib_calc.call_args_list[1][1])
 
     def test_functional(self):
         self.assertEqual([2, 3, 5], calculate_numbers(numbers=[3, 4, 5]))
+
 
 if __name__ == "__main__":
     main()
